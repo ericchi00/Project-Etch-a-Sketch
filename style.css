@@ -1,0 +1,16 @@
+.gridContainer {
+    display: grid;
+    flex-wrap: wrap;
+    /*grid-template-columns: repeat(15, 1fr); */
+    height: 950px;
+    width: 950px;
+    border: 10px solid black;
+}
+
+.grid {
+    border: 1px solid black;
+}
+
+.slider {
+    
+}
