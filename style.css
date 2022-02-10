@@ -12,10 +12,6 @@
     background-color: white;
 }
 
-.grid {
-    border: 1px solid black;
-}
-
 .slideContainer {
     margin-top: 10px;
     display: flex;
