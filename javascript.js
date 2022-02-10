@@ -1,22 +1,30 @@
 const gridContainer = document.querySelector('.gridContainer');
 
 //creates the grid based on the num (num x num format)
-function gridCreator (num) {
-    const gridSize = num * num;
+function gridCreator(num) {
+    let gridSize = num * num;
     for (i = 1; i <= gridSize; i++) {
         const grid = document.createElement('div');
         grid.classList.add('grid');
         gridContainer.appendChild(grid);
-        gridContainer.style.setProperty('grid-template-columns', 'repeat(' + num + ', 1fr)');
+        gridContainer.style.setProperty('grid-template-columns', 'repeat(' + num + ', 1fr)');   
     }
 }  
 
-const slider = document.querySelector('.myRange');
-const gridSizeInput = document.querySelector('.gridSizing');
+function resetGrid() {
+    const oldGrid = document.querySelectorAll('.grid');
+    oldGrid.forEach(grid => oldGrid.remove());
+}
 
-/*
-gridSizeInput.addEventListener('touchend', () => {
-    gridSizeInput.textContent = slider.value;
+const slider = document.getElementById('gridSlider');
+let updateGridSize = document.getElementById('gridSizing');
+
+let update = () => updateGridSize.innerHTML = slider.value;
+slider.addEventListener('input', () => {
+    resetGrid();
+    update();
+    gridCreator(slider.value);
 });
-*/
-gridCreator(16);
+
+update();
+gridCreator(slider.value);
