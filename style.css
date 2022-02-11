@@ -1,10 +1,13 @@
+#title {
+    text-align: center;
+}
+
 .gridContainer {
     display: grid;
     flex-wrap: wrap;
-    /*grid-template-columns: repeat(15, 1fr); */
     height: 800px;
     width: 800px;
-    border: 10px solid black;
+    border: 10px solid #36454F;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
@@ -12,20 +15,51 @@
     background-color: white;
 }
 
-.slideContainer {
+.bodyContainer {
+    width: 800px;
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.slideContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.gridSlider {
     justify-content: center;
-    width: 50px;
 }
 
-#title {
-    text-align: center;
+.slider::-webkit-slider-thumb {
+    background: #c4dfff;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 20px;
+    height: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background: #c4dfff;
+}
+
+.slider::-webkit-progress-value {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #c4dfff;
+}
+
+.buttonContainer {
+    position: absolute;
+    right: 0;
 }
 
 footer {
@@ -34,10 +68,12 @@ footer {
 }
 
 body {
-    background-color: bisque;
-}
+    background-color: #D3D3D3;
+    font-family: Roboto;
+} 
 
 button {
     color: white;
-    background-color: #001B3B;
+    background-color: #36454F;
+    border-radius: 8px;
 }
