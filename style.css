@@ -5,8 +5,8 @@
 .gridContainer {
     display: grid;
     flex-wrap: wrap;
-    height: 800px;
-    width: 800px;
+    height: 550px;
+    width: 600px;
     border: 10px solid #36454F;
     margin-left: auto;
     margin-right: auto;
@@ -16,7 +16,7 @@
 }
 
 .bodyContainer {
-    width: 800px;
+    width: 600px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
