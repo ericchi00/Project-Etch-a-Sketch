@@ -21,8 +21,8 @@ function resetGrid() {
 const resetBtn = document.querySelector('#reset');
 resetBtn.addEventListener('click', () => {
     resetGrid();    
-    gridCreator(15);
-    slider.value = 15;
+    gridCreator(10);
+    slider.value = 10;
     update();
     hoverEffect();
 });
